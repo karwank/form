@@ -1155,6 +1155,9 @@ $.fieldValue = function(el, successful) {
         }
         return a;
     }
+    if ($.fn.autoNumeric && $(el).autoNumeric('getSettings')) {
+      return $(el).autoNumeric('get')
+    }
     return $(el).val();
 };
 
